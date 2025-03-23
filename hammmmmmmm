@@ -1,0 +1,24 @@
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, Mes>
+
+# Token ko yahan daalein
+API_TOKEN = '8158267275:AAE3En1B8Tfjz-iOY3tOpT9sQwPW0>
+
+def start(update: Update, context: CallbackContext) ->
+    update.message.reply_text('Hello! Send me a messa>
+
+def echo(update: Update, context: CallbackContext) ->>
+    update.message.reply_text(update.message.text)
+
+def main() -> None:
+    updater = Updater(API_TOKEN)
+
+    dispatcher = updater.dispatcher
+    dispatcher.add_handler(CommandHandler("start", st>
+    dispatcher.add_handler(MessageHandler(filters.TEX>
+
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
